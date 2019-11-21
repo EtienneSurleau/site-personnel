@@ -35,7 +35,6 @@ class HomeController extends AbstractController
         }
         $session->set('referer','home');
         $contactForm = $this->handleContact($request);
-        $this->addFlash('success','test');
 
         return $this->render('home/index.html.twig', [
             'animation' => $animation,
