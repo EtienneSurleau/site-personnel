@@ -310,7 +310,7 @@ COMPETENCES
     margin-top: 20px;
     height: 80vh;
     border-radius: 2px;
-    width: 0%;
+    width: 0;
     padding-left: 0;
     margin-bottom: 0;
 }
@@ -366,7 +366,7 @@ COMPETENCES
     top: calc(100% - 15px);
 }
 #competences-bg{
-    background-image: url(/images/wordcloud.svg);
+    background-image: url(/images/wordcloud.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
