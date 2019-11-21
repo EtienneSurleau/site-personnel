@@ -69,8 +69,13 @@
             {% endif %}
         {% endfor %}
     {% endfor %}
+    <div id="content">
+        {% block body %}
+        {% endblock %}
+    </div>
+    {% block comp_body %}
 
-    {% block body %}{% endblock %}
+    {% endblock %}
 
     <footer class="mt-5" data-aos="fade-in">
         <div class="container">
