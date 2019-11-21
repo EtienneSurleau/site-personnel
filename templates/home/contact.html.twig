@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+    <meta name="description" content="Envie de me confier un site web à développer, de me demander un devis ou juste de demander des informations, toutes les informations sont ici.">
+    <meta property="og:description" content="Envie de me confier un site web à développer, de me demander un devis ou juste de demander des informations, toutes les informations sont ici.">
+    <meta property="og:title" content="Etienne Surleau - Contact">
+    <title>Etienne Surleau - Contact</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container mb-5 pt-5 firstelement fullscreen" id="container-contact-page" data-aos="fade-left" data-aos-duration="1000">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="landing-header">Contact</h1>
+                <p class="text-center mx-auto mb-5">Une question? Un devis? Contactez-moi, je vous réponds dès que possible.</p>
+            </div>
+        </div>
+        {% include 'form/contact.html.twig' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:og="http://ogp.me/ns#">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Etienne Surleau">
+        <meta property="og:site_name" content="Etienne Surleau">
+        <meta property="og:image" content="/images/thumbnail.png">
+        <meta property="og:image:width" content="1903" />
+        <meta property="og:image:height" content="849" />
+        <meta property="og:type" content="website">
+
+        <meta property="og:url" content="{{ app.request.uri }}" />
+
+        {% block meta %}{% endblock %}
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+    <nav id="navigation">
+        <ul>
+            <li>
+                <a href="{{ path('competences') }}"><div>
+                        <i class="fas fa-layer-group"></i> <span class="nav-text"><br>COMPETENCES</span>
+                    </div></a>
+            </li>
+            <li>
+                <a href="{{ path('experiences') }}"><div>
+                        <i class="fas fa-briefcase"></i> <span class="nav-text"><br>EXPERIENCES</span>
+                    </div></a>
+            </li>
+            <li id="nav-brand-li">
+                <a href="/"><img src="{{ asset('images/logoESblanc.png') }}" alt="Logo blanc accueil"></a>
+            </li>
+            <li>
+                <a href="{{ path('realisations') }}"><div>
+                        <i class="fas fa-hard-hat"></i> <span class="nav-text"><br>REALISATIONS</span>
+                    </div></a>
+
+            </li>
+            <li>
+                <a href="{{ path('contact') }}"><div>
+                        <i class="fas fa-envelope"></i> <span class="nav-text"><br>CONTACT</span>
+                    </div></a>
+
+            </li>
+        </ul>
+    </nav>
+    {# read and display all flash messages #}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            {% if loop.first %}
+                <div class="container-fluid text-center" id="flashes">
+            {% endif %}
+            <div class="alert alert-{{ label }} alert-dismissible fade show d-inline-block" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% if loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+
+    {% block body %}{% endblock %}
+
+    <footer class="mt-5" data-aos="fade-in">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-9 col-md-2 d-flex justify-content-center">
+                    <img src="{{ asset('images/logoESblanc.png') }}" alt="logo blanc" class="img-fluid" id="logofooter">
+                </div>
+                <div class="col-12 col-md-4 social">
+                    <p>
+                        <a href="https://www.linkedin.com/in/etienne-surleau/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </p>
+                    <p>
+                        <a href="mailto:etienne.surleau.pro@gmail.com"><i class="fa fa-envelope"></i> etienne.surleau.pro@gmail.com</a>
+                    </p>
+                    <p>
+                        <a href="tel:+33635397713"><i class="fa fa-phone"></i> +33 6 35 39 77 13</a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p>
+                        ©2019 Etienne SURLEAU
+                    </p>
+                    <p>
+                        <a href="{{ path('legals') }}" class="white"><u>Mentions légales</u></a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+        AOS.init();
+    </script>
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>

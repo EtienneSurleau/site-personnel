@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+    <meta name="description" content="Parcours universitaire et professionnel à l'origine de mes compétences.">
+    <meta property="og:description" content="Parcours universitaire et professionnel à l'origine de mes compétences.">
+    <meta property="og:title" content="Etienne Surleau - Expériences">
+    <title>Etienne Surleau - Expériences</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container firstelement" data-aos="{{ animation }}" data-aos-duration="2000">
+        <div class="row">
+            <div class="col-12 pt-5 text-center">
+                <h1>Expériences</h1>
+            </div>
+        </div>
+        <div class="row flex-row-reverse" id="timeline">
+            <div class="col-2 time-cat" data-aos="fade-up">
+                <h2 class="r-90">
+                    FORMATIONS
+                </h2>
+            </div>
+            <div class="col-10">
+                <div class="row" data-aos="fade-up">
+                    <div class="col-2 time-year time-cat pb-4">
+                        <div class="r-lg-90-alt">2015</div>
+                    </div>
+                    <div class="col-10 time-item time-item-grad pb-4">
+                        <p class="time-title">
+                            DUT Informatique
+                        </p>
+                        <p class="time-date">
+                            Septembre 2015 - Juin 2017
+                        </p>
+                        <p class="time-desc">
+                            Étudiant à l'IUT de Belfort puis de Dijon, j'ai appris la programmation, la gestion de projet et le réseau avec une affinité pour l'anglais et le développement web.
+                        </p>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-2 time-year time-cat pb-4">
+                        <div class="r-lg-90-alt">
+                            2017
+                        </div>
+                    </div>
+                    <div class="col-10 time-item time-item-grad pb-4">
+                        <p class="time-title">
+                            LP MN DDIM
+                        </p>
+                        <p class="time-desc">
+                            De retour à Belfort, la Licence Professionnelle Métier du Numérique : Design et Développement pour L'internet Mobile m'a permis de me spécialiser dans le web.
+                        </p>
+                        <p class="time-date">
+                            Septembre 2017 - Avril 2018
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-2 time-cat" data-aos="fade-up">
+                <h2 class="r-90-alt">
+                    PROFESSIONS
+                </h2>
+            </div>
+            <div class="col-10">
+                <div class="row" data-aos="fade-up">
+                    <div class="col-10 time-item time-item-exp pb-4">
+                        <p class="time-title">
+                            Divioseo
+                        </p>
+                        <p class="time-date">
+                            Avril 2018 - Juin 2018
+                        </p>
+                        <p class="time-desc">
+                            En stage de fin d'études, j'ai appris plus en 3 mois de travail qu'en 20 ans d'études. C'est là que j'ai appris le framework Laravel et commencé à développer mes compétences réelles.
+                        </p>
+                    </div>
+                    <div class="col-2 time-year time-cat pb-4">
+                        <div class="r-lg-90">
+                            2018
+                        </div>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-10 time-item time-item-exp pb-4">
+                        <p class="time-title">
+                            Regis Martelet
+                        </p>
+                        <p class="time-date">
+                            Juillet 2018 - Juin 2019
+                        </p>
+                        <p class="time-desc">
+                            Un an de travail principalement sur une application web de gestion de parc de location, mais aussi des APIs, du traitement de données et de la dématérialisation de factures. J'ai passé beaucoup de temps sur Symfony 4.
+                        </p>
+                    </div>
+                    <div class="col-2 time-year pb-4">
+
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-10 time-item time-item-exp pb-4">
+                        <p class="time-title">
+                            Akyos Communication
+                        </p>
+                        <p class="time-date">
+                            Juillet 2019 - Novembre 2019
+                        </p>
+                        <p class="time-desc">
+                            5 mois à découvrir les processus de développement d'une entreprise du web, la gestion de projet, l'hébergement web, la dynamique d'équipe, la communication, le SEO, tout pour un projet mené à bien.
+                        </p>
+                    </div>
+                    <div class="col-2 time-year time-cat pb-4">
+                        <div class="r-lg-90">
+                            2019
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" data-aos="fade-up">
+            <div class="col-12 text-center my-5 py-4">
+                <h2>Experiences personnelles</h2>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-6 bgblack p-5">
+                <h3 class="pb-4">Raspberry</h3>
+                <p>
+                    Je possède un micro-ordinateur Raspberry Pi 2, c'est à dire un ordinateur avec le minimum vital pour fonctionner de manière traditionnelle.
+                </p>
+                <p>
+                    Je m'en sers pour expérimenter de nouveaux OS, communiquer en réseau, héberger un serveur web ( pas le vôtre, c'est trop instable ).
+                </p>
+                <p>
+                    De manière générale, c'est un excellent outil d'apprentissage et d'expérimentations sans avoir à risquer l'intégrité de mon matériel principal.
+                </p>
+            </div>
+            <div class="col-md-6 p-0">
+                <img src="{{ asset('images/rasp.jpg') }}" alt="image raspberry" class="img-cover">
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+
+            <div class="col-md-6 bgred p-5 order-md-2">
+                <h3 class="pb-4">Mes sites</h3>
+                <p>
+                    Mes sites web personnels sont des expérimentations en tout genre, design, back-end, animations...
+                </p>
+                <p>
+                    Ce site web est la deuxième version d'un site plus large qui devait me servir de vitrine et d'adminitration, désormais séparé en deux.
+                </p>
+                <p>
+                    La deuxème partie de cet ancien site web est désormais privée et est en développement permanent. Elle me sert pour mon organisation personnelle et mes expérimentations sur Laravel et VueJS.
+                </p>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <img src="{{ asset('images/website.svg') }}" alt="image site web" class="img-fluid p-5">
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5 pt-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="text-center my-4">Contact</h3>
+            </div>
+        </div>
+        {% include 'form/contact.html.twig' %}
+    </div>
+{% endblock %}

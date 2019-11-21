@@ -1,0 +1,56 @@
+{# @var form \App\Form\ContactType #}
+<div class="row">
+    <div class="col-md-9 mb-md-0 mb-5">
+        {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-0 mt-2">
+                        {{form_row(form.nom)}}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-0 mt-2">
+                        {{form_row(form.email)}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-0 mt-2">
+                        {{form_row(form.sujet)}}
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+
+                    <div class="md-form">
+                        {{form_row(form.message)}}
+                    </div>
+
+                </div>
+            </div>
+
+
+        <div class="text-center text-md-left mt-2">
+            <input type="submit" value="Envoyer" class="btn contact-btn">
+        </div>
+        <div class="status"></div>
+        {{ form_end(form) }}
+    </div>
+    <div class="col-md-3 text-center">
+        <ul class="list-unstyled mb-0 mt-2">
+            <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                <p>33 rue Amiral Pierre, 21000 Dijon</p>
+            </li>
+
+            <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                <p>+33 6 35 39 77 13</p>
+            </li>
+
+            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                <p>etienne.surleau.pro@gmail.com</p>
+            </li>
+        </ul>
+    </div>
+</div>

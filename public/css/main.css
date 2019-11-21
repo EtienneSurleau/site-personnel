@@ -1,0 +1,453 @@
+:root{
+    --black-color: #1C1C1C;
+    --red-color: #E31C25;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--black-color);
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+h1{
+    font-size: 5vh;
+    letter-spacing: 0.8vw;
+}
+h2{
+    font-size: 4vh;
+    letter-spacing: 0.6vw;
+}
+h3{
+    font-size: 3vh;
+    letter-spacing: 0.4vw;
+}
+h4{
+    font-size: 20px;
+}
+a{
+    color: inherit;
+    transition: 0.5s;
+
+}
+p a{
+    text-decoration: underline;
+}
+a:hover{
+    color: var(--red-color);
+}
+.bgred{
+    background-color: var(--red-color);
+    color: white;
+}
+.bgblack{
+    background-color: var(--black-color);
+    color: white;
+}
+.bgwhite{
+    background-color: white;
+    color: var(--black-color);
+}
+.black{
+    color: var(--black-color);
+}
+.redhover:hover{
+    color: var(--red-color);
+}
+.btn{
+    border-radius: 0;
+}
+.contact-btn, .btn-realisations, .btn-competences{
+    border: 3px solid var(--red-color);
+    color: var(--red-color)!important;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.contact-btn:hover, .btn-realisations:hover, .btn-competences:hover{
+    color: white!important;
+    background-color: var(--red-color);
+}
+.form-control{
+    border-radius: 0;
+}
+.firstelement{
+    margin-top: 10vh;
+}
+.fullscreen{
+    min-height: 90vh;
+}
+.h-33{
+    height: calc(100% / 3);
+}
+.img-cover{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+#alerteMail{
+    position: absolute;
+    top: 12vh;
+    left: 0;
+}
+.close{
+    z-index: 3000;
+}
+/*@keyframes slideOut {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100vw;
+    }
+  }
+.fadeblack{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black-color);
+    z-index: 2000;
+    animation: 1s ease-out 0s 1 slideOut;
+    animation-fill-mode: forwards;  
+}*/
+/*
+FOOTER
+*/
+footer{
+    background-color: var(--black-color);
+    color: white;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+.social{
+    font-size: 16px;
+}
+.social a{
+    text-decoration: none;
+    color: white;
+
+}
+#logofooter{
+    max-height: 8vh;
+}
+/** LANDING PAGE **/
+
+#landing-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    margin-top: 10vh;
+    padding: 0;
+    overflow: hidden;
+}
+#landing-col-logo{
+    text-align: right;
+    height: 20vh;
+}
+#landing-col-logo img{
+    height: 100%;
+}
+#landing-col-text .row{
+    height: 10vh;
+    align-items: center;
+}
+.landing-header{
+    padding-left: 30px;
+
+}
+.landing-sub-header{
+    font-size: 3vh;
+}
+.landing-header, .landing-sub-header{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.landing-sub-image{
+    margin-top: 3vh;
+    height: 20vh;
+}
+.landing-icon{
+    font-size: 10vh;
+}
+#presentation{
+    background-color: var(--black-color);
+    color: white;
+}
+.stackitem{
+    padding:10px;
+    min-height: 20vh;
+}
+.stackitemright{
+    margin-left: auto;
+    text-align: right;
+}
+.stackitem > .row{
+    height: 100%;
+    align-items: center;
+    margin:0;
+}
+.stackitem i{
+    font-size: 10vh;
+}
+.col-stack-i{
+    display: flex;
+    justify-content: center;
+}
+
+#flashes{
+    height: 10vh;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    z-index: 1000;
+}
+/*
+MENTIONS LEGALES
+*/
+#legals{
+    margin-top:10vh;
+}
+/*
+REALISATIONS
+*/
+.colrealisations{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.realisation-excerpt{
+    background-color: rgba(255, 255, 255, .9);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: calc(100% - 65px);
+    left: 0;
+    transition: 0.7s;
+}
+.expanded-excerpt .realisation-excerpt{
+    top: 0;
+}
+
+.title-realisation-excerpt{
+    height: 65px;
+}
+.title-realisation{
+    font-weight: 600;
+}
+/*
+EXPERIENCES
+*/
+#timeline{
+    margin-top: 50px;
+}
+.time-title{
+    color: var(--red-color);
+    font-size: 2em;
+}
+.time-date{
+    color: gray;
+}
+.time-item-grad{
+    border-left: 6px solid var(--red-color);
+    padding-right: 0;
+}
+.time-item-exp{
+    border-right: 6px solid var(--red-color);
+    text-align: right;
+    padding-left: 0;
+}
+.time-cat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.time-year{
+    font-size: 2em;
+}
+.r-90{
+    transform: rotate(90deg);
+
+
+    /* Legacy vendor prefixes that you probably don't need... */
+  
+    /* Safari */
+    -webkit-transform: rotate(90deg);
+  
+    /* Firefox */
+    -moz-transform: rotate(90deg)
+}
+.r-90-alt{
+    transform: rotate(-90deg);
+
+
+    /* Legacy vendor prefixes that you probably don't need... */
+  
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+  
+    /* Firefox */
+    -moz-transform: rotate(-90deg)
+}
+/*
+COMPETENCES
+*/
+
+#scrollspy-competences{
+    border: 4px solid var(--red-color);
+    position: sticky;
+    left: 4%;
+    top: 15vh;
+    margin-top: 20px;
+    height: 80vh;
+    border-radius: 2px;
+    width: 0%;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.scrollspy-item{
+    border: 6px solid var(--red-color);
+    border-radius: 3em;
+    background-color: white;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -1.5em;
+    padding: 0;
+}
+.scrollspy-item:first-child{
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+}
+.scrollspy-item:last-child{
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+.list-group-item.active {
+    z-index: 2;
+    background-color: white;
+    color: var(--red-color);
+    border-color: var(--black-color);
+}
+.competence{
+    min-height: 90vh;
+    justify-content: end;
+    margin-top: -15vh;
+    padding-top: 15vh;
+}
+#scrollspy-1{
+    top: -20px;
+}
+#scrollspy-2{
+    top: calc(20% - 15px);
+}
+#scrollspy-3{
+    top: calc(40% - 15px);
+}
+#scrollspy-4{
+    top: calc(60% - 15px);
+}
+#scrollspy-5{
+    top: calc(80% - 15px);
+}
+#scrollspy-6{
+    top: calc(100% - 15px);
+}
+#competences-bg{
+    background-image: url(/images/wordcloud.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.sub-competence{
+    font-size: 1.25em;
+    padding: 3em;
+}
+/* 
+BOOTSTRAP LG
+*/
+@media screen and (max-width: 991px){
+    .landing-header{
+        text-align: center;
+        padding-left: 0;
+    }
+    .r-lg-90{
+        transform: rotate(90deg);
+
+
+        /* Legacy vendor prefixes that you probably don't need... */
+      
+        /* Safari */
+        -webkit-transform: rotate(90deg);
+      
+        /* Firefox */
+        -moz-transform: rotate(90deg)
+    }
+    .r-lg-90-alt{
+        transform: rotate(-90deg);
+
+
+        /* Legacy vendor prefixes that you probably don't need... */
+      
+        /* Safari */
+        -webkit-transform: rotate(-90deg);
+      
+        /* Firefox */
+        -moz-transform: rotate(-90deg)
+    }
+    .time-title{
+        font-size: 1.3em;
+    }
+}
+/* 
+BOOTSTRAP MD
+*/
+@media screen and (max-width: 767px){
+    .landing-header{
+        font-size: 4vh;
+    }
+    #landing-col-text .row{
+        justify-content: center;
+        height: 7vh;
+    }
+    #landing-col-logo{
+        margin-bottom: 3vh;
+        text-align: center;
+    }
+    .landing-sub-image{
+        height: 10vh;
+    }
+    .realisation-excerpt p{
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 0.5rem;
+    }
+}
+@media screen and (max-width: 575px){
+    .scrollspy-item{
+        border-radius: 2em;
+        width: 2em;
+        height: 2em;
+        left: -1em;
+    }
+    .scrollspy-item:first-child{
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+    }
+    .scrollspy-item:last-child{
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+    }
+}

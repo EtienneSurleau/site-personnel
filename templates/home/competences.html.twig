@@ -1,0 +1,217 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+    <meta name="description" content="Mes compétences en détail, tout pour le bon déroulement de votre projet, de la conception à la livraison en passant par la réalisation.">
+    <meta property="og:description" content="Mes compétences en détail, tout pour le bon déroulement de votre projet, de la conception à la livraison en passant par la réalisation.">
+    <meta property="og:title" content="Etienne Surleau - Compétences">
+    <title>Etienne Surleau - Compétences</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid firstelement fullscreen" data-aos="fade-right" data-aos-duration="1000" id="competences-bg">
+        <div class="row">
+            <div class="col-12 py-5 text-center">
+                <h1 class="landing-header">Compétences</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container-competences">
+        <div class="row">
+            <div class="col-1 p-0">
+                <div id="scrollspy-competences" class="list-group">
+                    <a class="scrollspy-item list-group-item list-group-item-action" id="scrollspy-1" href="#competence-1"><i class="fa fa-server"></i></a>
+                    <a class="scrollspy-item list-group-item list-group-item-action" id="scrollspy-2" href="#competence-2"><i class="far fa-object-group"></i></a>
+                    <a class="scrollspy-item list-group-item list-group-item-action" id="scrollspy-3" href="#competence-3"><i class="fa fa-database"></i></a>
+                    <a class="scrollspy-item list-group-item list-group-item-action" id="scrollspy-4" href="#competence-4"><i class="fa fa-globe"></i></a>
+                    <a class="scrollspy-item list-group-item list-group-item-action" id="scrollspy-5" href="#competence-5"><i class="fa fa-wrench"></i></a>
+                    <a class="scrollspy-item list-group-item list-group-item-action" id="scrollspy-6" href="#competence-6"><i class="fa fa-question-circle"></i></a>
+                </div>
+            </div>
+            <div class="col-11" id="spy-target" data-spy="scroll" data-target="#scrollspy-competences" data-offset="0">
+                <div class="row competence" id="competence-1" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="pt-5">Back-end</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Laravel</h3>
+                                <p><b>Développement Fullstack.</b> </p>
+                                <p>
+                                    Laravel est mon framework favori pour créer des applications de taille moyenne. Sa simplicité d'utilisation et
+                                    son kit complet de démarrage (Bootstrap, Eloquent, VueJS) permet de
+                                    développer des sites à grande vitesse.</p>
+                            </div>
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Symfony</h3>
+                                <p><b>Développement Backend.</b></p>
+                                <p>J'utilise symfony pour le développement d'APIs et des sites web à dominance back-end principalement industriels. Il permet le développement
+                                    d'applications de toutes tailles, et est utilisé par un grand nombre d'autres frameworks et CMS populaires</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-xl-6">
+                                <img src="{{ asset('images/cogs.jpg') }}" alt="Image responsive" class="img-fluid">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row competence" id="competence-2" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="pt-5">Front-end</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Design et intégration.</h3>
+                                <p><b>Création et intégration de maquettes, responsive design.</b></p>
+                                <p>Prototypage de votre site et de sa charte graphique,  Respect du code couleur, création d'une nouvelle
+                                    identité, adaptabilité sur toutes tailles d'écrans (responsive design)...</p>
+                                <p>Intégration de la maquette ou création libre avec CSS et ses préprocesseurs SASS et LESS, adaptabilité sur toutes tailles d'écrans
+                                    (responsive design), animation. </p>
+                            </div>
+                            <div class="col-lg-6 sub-competence">
+                                <h3>JS / VueJS</h3>
+                                <p><b>Une meilleure expérience utilisateur.</b></p>
+                                <p>réduction des temps de chargement, déroulement infini, animations, gestion back-end asynchrone et amélioration de la fluidité.
+                                    VueJS a l'avantage d'être particulièrement compatible avec Laravel, c'est donc un choix simple pour une application Fullstack.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-xl-6">
+                                <img src="{{ asset('images/responsive.png') }}" alt="Image engrenages" class="img-fluid">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row competence" id="competence-3" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="pt-5">Bases de données</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Conception</h3>
+                                <p><b>Du besoin à la solution.</b></p>
+                                <p>Modélisation d'une base de données relationnelle répondant à vos besoins, schémas UML, extension d'une base existante, gestion de l'internationalisation ( i18n ).</p>
+                            </div>
+                            <div class="col-lg-6 sub-competence">
+                                <h3>SQL</h3>
+                                <p><b>Implémentation de la solution.</b></p>
+                                <p>Développement du code correspondant au modèle de la base, choix du SGBD, implémentation sur le serveur, exports de la base ou de données personnalisées à vos besoins</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-xl-6">
+                                <img src="{{ asset('images/cubes.jpg') }}" alt="Image cubes" class="img-fluid">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row competence" id="competence-4" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="pt-5">Hébergement</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Serveurs et DNS</h3>
+                                <p><b>Comment et où atteindre votre site web</b></p>
+                                <p>Choix de l'hébergeur de votre site, choisissez-le de votre côté ou confiez-le moi, bénéficiez de mes conseils en matière d'espace de stockage et maintenance. Gestion de vos noms de domaine et ses extensions (.fr, .com, .net...).</p>
+                            </div>
+                            <div class="col-lg-6 sub-competence">
+                                <h3>SSL et HTTPS</h3>
+                                <p><b>La sécurité sur le web</b></p>
+                                <p>Par défaut, les communications sur le web ne sont pas protégées, et vos données peuvent être interceptées en cours de navigation, comme vos numéros
+                                    de carte de crédits, informations de paiement ou mots de passe. Générer un certificat SSL permet de passer votre site en HTTPS et de garantir la sécurité
+                                    à vos utilisateurs.</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-xl-6">
+                                <img src="{{ asset('images/server.jpg') }}" alt="Image engrenages" class="img-fluid">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row competence" id="competence-5" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="pt-5">Maintenance</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Gestion</h3>
+                                <p><b>Gestion de contenus et corrections de bugs.</b></p>
+                                <p>Modification de vos pages et articles, correction de bugs ou simple besoin de conseils, je réponds à vos demandes en matière de contenus, design et amélioration sur votre site.</p>
+                            </div>
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Référencement</h3>
+                                <p><b>Améliorez votre SEO.</b></p>
+                                <p>Avoir un site c'est bien, que celui-ci soit visible c'est mieux. Je fais en sorte que vos sites répondent au mieux aux spécifications modernes et vous aide à vous placer
+                                    plus haut dans votre domaine pour augmenter votre visibilité et chiffre d'affaires</p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-xl-6">
+                                <img src="{{ asset('images/seo.png') }}" alt="Image SEO" class="img-fluid">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row competence" id="competence-6" data-aos="fade-up">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="pt-5">Consulting</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Devis</h3>
+                                <p><b>Un budget pour chaque projet.</b></p>
+                                <p>Je fais en sorte d'adapter votre budget à votre besoin. Soumettez-moi votre projet et discutons ensemble des solutions adaptées en fonction de la somme à dépenser.</p>
+                            </div>
+                            <div class="col-lg-6 sub-competence">
+                                <h3>Conseils</h3>
+                                <p><b>L'aide d'un professionnel.</b></p>
+                                <p>Si vous avez une question à me poser une formation à demander, un problème à résoudre, des soucis de référencement ou n'importe quelle autre question dans mon domaine de compétences, <a href="{{ path('contact') }}">demandez-moi!</a></p>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-xl-6">
+                                <img src="{{ asset('images/consulting.jpg') }}" alt="Image question" class="img-fluid">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5 pt-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="text-center my-4">Contact</h3>
+                <p class="text-center mx-auto mb-5">Une question? Un devis? Contactez-moi, je vous réponds dès que possible.</p>
+            </div>
+        </div>
+        {% include 'form/contact.html.twig' %}
+    </div>
+{% endblock %}

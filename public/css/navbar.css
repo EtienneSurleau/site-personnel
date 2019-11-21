@@ -1,0 +1,79 @@
+/** NAVBAR **/
+
+#navigation{
+    color: white;
+    background-color: var(--black-color);
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 5px solid var(--red-color);
+}
+#navigation-brand{
+    margin-right: 0;
+    height: 7vh;
+    width: 7vh;
+    padding: 0;
+}
+#navigation-brand img{
+    height: 100%;
+    width: 100%;
+}
+#navigation a{
+    color: white;
+    transition: 0.5s ease;
+}
+#navigation li:not(#nav-brand-li):hover{
+    transition: 0.5s;
+    background-color: var(--red-color);
+}
+#navigation a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: calc(100% - 10px);
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+#navigation ul{
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+}
+#navigation ul li{
+    height: 100%;
+    text-align: center;
+    width: 20%;
+    list-style: none;
+}
+#navigation ul li img{
+    height: 7vh;
+    width: 7vh;
+    pointer-events: none;
+    color: var(--black-color);
+}
+.nav-text{
+    font-weight: 700;
+}
+
+/*
+BOOTSTRAP SM
+*/
+@media screen and (max-width: 575px){
+    .nav-text{
+        position: absolute;
+        top:0;
+        left:-9999px;
+        color: var(--black-color);
+    }
+}

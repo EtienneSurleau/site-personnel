@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+    <meta name="description" content="Développeur web en freelance entre Dijon et Beaune, je conçois de A à Z des sites web ou applications web avec Laravel, Symfony et Bootstrap.">
+    <meta property="og:description" content="Développeur web en freelance entre Dijon et Beaune, je conçois de A à Z des sites web ou applications web avec Laravel, Symfony et Bootstrap.">
+    <meta property="og:title" content="Etienne Surleau - Freelance">
+    <title>Etienne Surleau - Freelance</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid" id="landing-container" data-aos="{{animation}}" data-aos-duration="2000">
+        <div class="row justify-content-center w-100 mt-4 mt-md-0">
+            <div class="col-md-auto" id="landing-col-logo">
+                <img src="{{ asset('images/logoES.png') }}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-auto" id="landing-col-text">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="landing-header">Etienne SURLEAU</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1 class="landing-header">Développeur Web</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row w-100 mt-3 mt-md-5 pt-md-5">
+            <div class="col-sm-6 text-center">
+                <h2 class="landing-sub-header">Sites vitrine</h2>
+                <img class="landing-sub-image" src="{{ asset('images/screen.png') }}" alt="Image site vitrine">
+
+            </div>
+            <div class="col-sm-6 text-center mt-3 mt-md-0">
+                <h2 class="landing-sub-header">Applications web</h2>
+                <img class="landing-sub-image" src="{{ asset('images/appweb.png') }}" alt="Image application web">
+            </div>
+        </div>
+    </div>
+    <div id="presentation" class="container-fluid py-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col text-center">
+                <h3>Développeur web fullstack freelance</h3>
+                <h4>Symfony / Laravel / VueJS / PHP / HTML / JS / CSS</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center pt-5">
+            <div class="col-md-7" id="profil-text">
+                <p>
+                    Je m’appelle Etienne Surleau et suis un développeur web en freelance à Dijon et alentours, Nuits-Saint-Georges et Beaune. Je réalise des applications web, sites web sur mesure, APIs, ou sites vitrines.
+                </p>
+                <p>
+                    Concepteur et développeur fullstack à dominance back-end avec les frameworks Symfony et Laravel, j'utilise aussi VueJS pour le front-end et réalise l'intégration de maquettes.
+                </p>
+                <p>
+                    En dehors du développement, je suis avide de bricolage, moto, jeux vidéos, et sports divers tels que le tir à l'arc ou l'escalade.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0" id="stack">
+        <div class="row py-5">
+            <div class="col text-center">
+                <h3>Compétences / Prestations</h3>
+                <a href="{{ path('competences') }}" class="btn btn-competences mt-4">En savoir plus</a>
+            </div>
+        </div>
+        <div class="row p-0 m-0">
+            <div class="col-12 col-sm-6 stackitem bgred" data-aos="fade-down-right" data-aos-duration="1000">
+                <div class="row">
+                    <div class="col-3 col-md-2 col-stack-i">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <div class="col-9 col-md-10">
+                        <h4>Back-end</h4>
+                        <p>
+                            Développement d'application web avec frameworks Laravel, Symfony ou simplement en PHP.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 stackitem bgblack" data-aos="fade-down-left" data-aos-duration="1000">
+                <div class="row">
+                    <div class="col-9 col-md-10 text-right">
+                        <h4>Front-end</h4>
+                        <p>
+                            Intégration/création de site web/vitrine à partir de maquettes, responsive tout supports, framework VueJS.
+                        </p>
+                    </div>
+                    <div class="col-3 col-md-2 col-stack-i">
+                        <i class="far fa-object-group"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p-0 m-0">
+            <div class="col-12 col-sm-6 stackitem bgblack" data-aos="fade-down-right" data-aos-duration="1000">
+                <div class="row">
+                    <div class="col-3 col-md-2 col-stack-i">
+                        <i class="fa fa-database"></i>
+                    </div>
+                    <div class="col-9 col-md-10">
+                        <h4>Bases de données</h4>
+                        <p>
+                            Conception, réalisation et administration Mysql, traitement de données.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 stackitem bgred text-right" data-aos="fade-down-left" data-aos-duration="1000">
+                <div class="row">
+                    <div class="col-9 col-md-10">
+                        <h4>Hébergement</h4>
+                        <p>
+                            Gestion hébergements, nom de domaine, emails, certificats ssl (https).
+                        </p>
+                    </div>
+                    <div class="col-3 col-md-2 col-stack-i">
+                        <i class="fa fa-globe"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row p-0 m-0">
+            <div class="col-12 col-sm-6 stackitem bgred" data-aos="fade-down-right" data-aos-duration="1000">
+                <div class="row">
+                    <div class="col-3 col-md-2 col-stack-i">
+                        <i class="fa fa-wrench"></i>
+                    </div>
+                    <div class="col-9 col-md-10">
+                        <h4>Maintenenance</h4>
+                        <p>
+                            Intégration / modification de contenus, référencement, corrections de bugs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 stackitem bgblack text-right" data-aos="fade-down-left" data-aos-duration="1000">
+                <div class="row">
+                    <div class="col-9 col-md-10">
+                        <h4>Consulting</h4>
+                        <p>
+                            Une question? Un problème? Une demande? Travaillons ensemble pour trouver une solution.
+                        </p>
+                    </div>
+                    <div class="col-3 col-md-2 col-stack-i">
+                        <i class="fa fa-question-circle"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5 pt-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="text-center my-4">Contact</h3>
+                <p class="text-center mx-auto mb-5">Une question? Un devis? Contactez-moi, je vous réponds dès que possible.</p>
+            </div>
+        </div>
+        {% include 'form/contact.html.twig' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+    <meta name="description" content="Extraits de mes réalisations développées seul ou en équipe, n'hésitez pas à y ajouter la vôtre!">
+    <meta property="og:description" content="Extraits de mes réalisations développées seul ou en équipe, n'hésitez pas à y ajouter la vôtre!">
+    <meta property="og:title" content="Etienne Surleau - Realisations">
+    <title>Etienne Surleau - Realisations</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid firstelement fullscreen" data-aos="{{animation}}" data-aos-duration="2000">
+        <div class="row">
+            <div class="col-12 py-5 text-center">
+                <h1 class="landing-header">Réalisations</h1>
+            </div>
+        </div>
+        <div class="row" id="rowrealisations">
+            <div class="col-12 col-md-6 px-0 mx-0 colrealisations">
+                <img src="{{ asset('images/planiloc.png') }}" alt="" class="img-fluid">
+                <div class="realisation-excerpt">
+                    <div class="text-realisation-excerpt">
+                        <div class="title-realisation-excerpt d-flex align-items-center justify-content-center flex-column">
+                            <h4 class="title-realisation">Planiloc</h4>
+                            <p class="mb-0">Gestion parc location</p>
+                        </div>
+                        <p class="pt-md-3 px-md-3">Conception et réalisation back-end <b>Symfony 4</b>.</p>
+                        <p><small>aide à la conception de l'outil en tant que développeur chez <a class="redhover" href="https://www.martelet.fr/" target="_blank">REGIS MARTELET</a></small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 px-0 mx-0 colrealisations">
+                <img src="{{ asset('images/o11ze.png') }}" alt="" class="img-fluid">
+                <div class="realisation-excerpt">
+                    <div class="title-realisation-excerpt d-flex align-items-center justify-content-center flex-column">
+                        <h4 class="title-realisation"><a class="redhover" href="https://o11ze.com">O11ze</a></h4>
+                        <p class="mb-0">Crèperie bretonne, food-truck.</p>
+                    </div>
+                    <p class="pt-md-3 px-md-3">Intégration maquette et améliorations avec <b>Bootstrap 4</b>.</p>
+                    <p><small>En collaboration avec <a class="redhover" href="https://akyos.com" target="_blank">Akyos Communication</a></small></p>
+                    <a class="btn btn-realisations" href="https://o11ze.com">Voir le site</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 px-0 mx-0 colrealisations">
+                <img src="{{ asset('images/somepre.png') }}" alt="" class="img-fluid">
+                <div class="realisation-excerpt">
+                    <div class="title-realisation-excerpt d-flex align-items-center justify-content-center flex-column">
+                        <h4 class="title-realisation"><a class="redhover" href="https://somepre.fr">Somepre</a></h4>
+                        <p class="mb-0">Outillage industriel</p>
+                    </div>
+
+                    <p class="pt-md-3 px-md-3">Intégration de la maquette avec <b>Bootstrap 4</b>.</p>
+                    <p><small>En collaboration avec <a class="redhover" href="https://akyos.com" target="_blank">Akyos Communication</a></small></p>
+                    <a class="btn btn-realisations" href="https://somepre.fr">Voir le site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="landing-sub-header">Il ne manque que la vôtre</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-5 pt-5" data-aos="fade-up">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="text-center my-4">Contact</h3>
+                <p class="text-center mx-auto mb-5">Une question? Un devis? Contactez-moi, je vous réponds dès que possible.</p>
+            </div>
+        </div>
+        {% include 'form/contact.html.twig' %}
+    </div>
+{% endblock %}
