@@ -311,7 +311,7 @@ COMPETENCES
     width: 0;
     padding-left: 0;
     margin-bottom: 0;
-    z-index: 2000;
+    z-index: 999;
 }
 .scrollspy-item{
     border: 6px solid var(--red-color);
